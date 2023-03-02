@@ -7,7 +7,7 @@ public class Pawn extends Chess{
     private List<String> moves;
     boolean isWhite;
     public Pawn(int x, int y, int type,boolean isWhite) {
-        super(x, y, type,isWhite);
+        super(x, y, isWhite);
 
     }
 
@@ -24,11 +24,6 @@ public class Pawn extends Chess{
     @Override
     public int getY() {
         return y;
-    }
-
-    @Override
-    public int getType() {
-        return type;
     }
 
     @Override

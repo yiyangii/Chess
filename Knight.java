@@ -6,7 +6,7 @@ public class Knight extends Chess{
     private List<String> moves;
     private int type;
     private boolean isWhite;
-    public Knight(int x, int y, int type, boolean isWhite) {
+    public Knight(int x, int y,boolean isWhite) {
         super(x, y, isWhite);
     }
 

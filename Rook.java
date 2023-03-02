@@ -6,8 +6,8 @@ public class Rook extends Chess{
     private List<String> moves;
     private int type;
     private boolean isWhite;
-    public Rook(int x, int y, int type, boolean isWhite) {
-        super(x, y, type, isWhite);
+    public Rook(int x, int y,boolean isWhite) {
+        super(x, y, isWhite);
     }
 
     @Override
@@ -23,11 +23,6 @@ public class Rook extends Chess{
     @Override
     public int getY() {
         return y;
-    }
-
-    @Override
-    public int getType() {
-        return type;
     }
 
     @Override

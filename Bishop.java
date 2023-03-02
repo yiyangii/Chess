@@ -27,11 +27,6 @@ public class Bishop extends Chess{
     }
 
     @Override
-    public int getType() {
-        return type;
-    }
-
-    @Override
     public boolean getWhite() {
         return isWhite;
     }

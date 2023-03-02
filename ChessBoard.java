@@ -15,7 +15,7 @@ public class ChessBoard {
         return result;
     }
 
-    private Chess chessConvert(String chess,Boolean isWhite){
+    private void chessConvert(String chess,Boolean isWhite){
         int x = chess.charAt(1) - 'a';
         int y = (int)chess.charAt(2);
         char type = chess.charAt(0);
@@ -23,7 +23,18 @@ public class ChessBoard {
 
     }
 
-    private
+    private Chess createChess(int x,int y,char type,boolean isWhite){
+        Chess result;
+        switch (type){
+            case 'R':
+                result = new Rook(x,y,isWhite);
+                break;
+            case 'K':
+                result = new Knight(x,y,isWhite);
+                break;
+            case
+        }
+    }
 
 
 

@@ -7,7 +7,7 @@ public class Queen extends Chess{
     private int type;
     private boolean isWhite;
     public Queen(int x, int y, int type, boolean isWhite) {
-        super(x, y, type, isWhite);
+        super(x, y, isWhite);
     }
 
     @Override
@@ -23,11 +23,6 @@ public class Queen extends Chess{
     @Override
     public int getY() {
         return y;
-    }
-
-    @Override
-    public int getType() {
-        return type;
     }
 
     @Override
