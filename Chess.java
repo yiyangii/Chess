@@ -16,7 +16,10 @@ public abstract class Chess {
         moves = new ArrayList<>();
     }
 
-    public abstract List<String> getMoves();
+    protected Chess() {
+    }
+
+    public abstract List<String> getMoves(Chess[][] board);
 
     public abstract int getX();
 
@@ -24,5 +27,6 @@ public abstract class Chess {
 
     public abstract boolean getWhite();
 
-    public abstract void validMove(char[][] board);
+    public abstract void validMove(Chess[][] board);
+
 }

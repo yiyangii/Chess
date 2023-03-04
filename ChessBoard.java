@@ -4,23 +4,31 @@ public class ChessBoard {
     // Input : WHITE: Rf1, Kg1, Pf2, Ph2, Pg3
     //BLACK: Kb8, Ne8, Pa7, Pb7, Pc7, Ra5
     //PIECE TO MOVE: Rf1
-
+    Chess[][] chessBoard;
     public ChessBoard(String white,String black,String pieceToMove){
+        chessBoard = new Chess[8][8];
+        addToChessBoard(white,true);
+        addToChessBoard(black,false);
+    }
 
+    public void addToChessBoard(String inputString,boolean isWhite){
+        String[] input = stringParser(inputString);
 
+        for(String s : input){
+            int x = s.charAt(1) - 'a' ;
+            int y = 7 - (s.charAt(2) - 49);
+            char type = s.charAt(0);
+
+            Chess result = createChess(x,y,type,isWhite);
+
+            chessBoard[x][y] = result;
+        }
     }
 
     private String[] stringParser(String toParse){
-        String[] result = toParse.split(" ,");
-        return result;
-    }
-
-    private void chessConvert(String chess,Boolean isWhite){
-        int x = chess.charAt(1) - 'a';
-        int y = (int)chess.charAt(2);
-        char type = chess.charAt(0);
-
-
+        toParse = toParse.replaceAll("[,\\s]+", ""); // 去除逗号和空格
+        String[] output = toParse.split("(?<=\\G.{3})");
+        return output;
     }
 
     private Chess createChess(int x,int y,char type,boolean isWhite){
@@ -30,10 +38,22 @@ public class ChessBoard {
                 result = new Rook(x,y,isWhite);
                 break;
             case 'K':
+                result = new King(x,y,isWhite);
+                break;
+            case 'P':
+                result = new Pawn(x,y,isWhite);
+                break;
+            case 'N':
                 result = new Knight(x,y,isWhite);
                 break;
-            case
+            case 'Q':
+                result = new Queen(x,y,isWhite);
+                break;
+            default:
+                result = null;
+                break;
         }
+        return result;
     }
 
 

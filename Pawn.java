@@ -6,14 +6,14 @@ public class Pawn extends Chess{
     private int type;
     private List<String> moves;
     boolean isWhite;
-    public Pawn(int x, int y, int type,boolean isWhite) {
+    public Pawn(int x, int y,boolean isWhite) {
         super(x, y, isWhite);
 
     }
 
     @Override
-    public List<String> getMoves() {
-        return moves;
+    public List<String> getMoves(Chess[][] board) {
+        return null;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class Pawn extends Chess{
     }
 
     @Override
-    public void validMove(char[][] board) {
+    public void validMove(Chess[][] board) {
 
     }
 }

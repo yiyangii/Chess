@@ -11,7 +11,7 @@ public class Rook extends Chess{
     }
 
     @Override
-    public List<String> getMoves() {
+    public List<String> getMoves(Chess[][] board) {
         return moves;
     }
 
@@ -31,7 +31,8 @@ public class Rook extends Chess{
     }
 
     @Override
-    public void validMove(char[][] board) {
+    public void validMove(Chess[][] board) {
 
     }
+
 }

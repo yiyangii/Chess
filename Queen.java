@@ -6,14 +6,15 @@ public class Queen extends Chess{
     private List<String> moves;
     private int type;
     private boolean isWhite;
-    public Queen(int x, int y, int type, boolean isWhite) {
+    public Queen(int x, int y, boolean isWhite) {
         super(x, y, isWhite);
     }
 
     @Override
-    public List<String> getMoves() {
-        return moves;
+    public List<String> getMoves(Chess[][] board) {
+        return null;
     }
+
 
     @Override
     public int getX() {
@@ -31,7 +32,8 @@ public class Queen extends Chess{
     }
 
     @Override
-    public void validMove(char[][] board) {
+    public void validMove(Chess[][] board) {
 
     }
+
 }

@@ -11,8 +11,8 @@ public class Knight extends Chess{
     }
 
     @Override
-    public List<String> getMoves() {
-        return moves;
+    public List<String> getMoves(Chess[][] board) {
+        return null;
     }
 
     @Override
@@ -31,7 +31,7 @@ public class Knight extends Chess{
     }
 
     @Override
-    public void validMove(char[][] board) {
+    public void validMove(Chess[][] board) {
 
     }
 }
