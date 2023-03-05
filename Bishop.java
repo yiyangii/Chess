@@ -39,9 +39,7 @@ public class Bishop extends Chess{
     @Override
     public void validMove(Chess[][] board) {
 
-        if(board[x][y] != null){
-            return;
-        }
+
         //Check top-left;
         int locationX = x - 1;
         int locationY = y - 1;

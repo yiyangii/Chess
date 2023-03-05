@@ -8,7 +8,9 @@ public class Rook extends Chess{
     private int type;
     private boolean isWhite;
     public Rook(int x, int y,boolean isWhite) {
-        super(x, y, isWhite);
+        this.x = x;
+        this.y = y;
+        this.isWhite = isWhite;
     }
 
     @Override
@@ -34,9 +36,7 @@ public class Rook extends Chess{
 
     @Override
     public void validMove(Chess[][] board) {
-        if(board[x][y] != null){
-            return;
-        }
+
 
         //Check Horizontal
 

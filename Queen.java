@@ -37,9 +37,7 @@ public class Queen extends Chess{
 
     @Override
     public void validMove(Chess[][] board) {
-        if(board[x][y] != null){
-            return;
-        }
+
 
         //Check Horizontal
 
