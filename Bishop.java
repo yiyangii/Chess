@@ -51,6 +51,11 @@ public class Bishop extends Chess{
                 char charX = (char) (locationX + 96);
                 String move = locationX + "" + locationY;
                 moves.add(move);
+            }else if(board[locationX][locationY].getWhite() != isWhite){
+                char charX = (char) (locationX + 96);
+                String move = locationX + "" + locationY;
+                moves.add(move);
+                break;
             }else{
                 break;
             }
@@ -62,6 +67,10 @@ public class Bishop extends Chess{
         locationY = y - 1;
         while(locationX < 8 && locationY >= 0){
             if(board[locationX][locationY] == null){
+                char charX = (char) (locationX + 96);
+                String move = locationX + "" + locationY;
+                moves.add(move);
+            }else if(board[locationX][locationY].getWhite() != isWhite){
                 char charX = (char) (locationX + 96);
                 String move = locationX + "" + locationY;
                 moves.add(move);
@@ -80,6 +89,10 @@ public class Bishop extends Chess{
                 char charX = (char) (locationX + 96);
                 String move = locationX + "" + locationY;
                 moves.add(move);
+            }else if(board[locationX][locationY].getWhite() != isWhite){
+                char charX = (char) (locationX + 96);
+                String move = locationX + "" + locationY;
+                moves.add(move);
             }else{
                 break;
             }
@@ -92,6 +105,10 @@ public class Bishop extends Chess{
         locationY = y + 1;
         while(locationX < 8 && locationY < 8){
             if(board[locationX][locationY] == null){
+                char charX = (char) (locationX + 96);
+                String move = locationX + "" + locationY;
+                moves.add(move);
+            }else if(board[locationX][locationY].getWhite() != isWhite){
                 char charX = (char) (locationX + 96);
                 String move = locationX + "" + locationY;
                 moves.add(move);

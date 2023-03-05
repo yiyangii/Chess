@@ -19,6 +19,7 @@ public class ChessBoard {
             int y = 7 - (s.charAt(2) - 49);
             char type = s.charAt(0);
 
+
             Chess result = createChess(x,y,type,isWhite);
 
             chessBoard[x][y] = result;

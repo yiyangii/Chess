@@ -14,7 +14,8 @@ public class main {
             System.out.println();
         }
 
-        Chess c = new Bishop(3,3,true);
+        Chess c = new Rook(3,2,true);
+
         System.out.println();
 
         System.out.println(c.getMoves(chessBoard.chessBoard));
